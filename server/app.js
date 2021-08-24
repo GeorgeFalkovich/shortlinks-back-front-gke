@@ -12,6 +12,7 @@ app.use("/api/link", require("./routes/link.routes"));
 app.use("/t", require("./routes/redirect.routes"));
 
 const PORT = process.env.PORT || 5000;
+const BACK_URI = "BACK_URI!";
 async function start() {
   try {
     await mongoose.connect(process.env.DB, {
