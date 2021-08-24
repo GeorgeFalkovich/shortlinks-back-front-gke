@@ -6,7 +6,7 @@ export const useHttp = () => {
 
   const request = useCallback(
     async (url, method = "GET", body = null, headers = {}) => {
-      const BACK_URL = process.env.BACK_URL;
+      const BACK_URI = process.env.BACK_URL + "";
       setLoading(true);
       try {
         if (body) {
@@ -14,7 +14,7 @@ export const useHttp = () => {
           headers["Content-Type"] = "application/json";
         }
 
-        const response = await fetch(BACK_URL + url, { method, body, headers });
+        const response = await fetch(BACK_URI + url, { method, body, headers });
         const data = await response.json();
 
         if (!response.ok) {
