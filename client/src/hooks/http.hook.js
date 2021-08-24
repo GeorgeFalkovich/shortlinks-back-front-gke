@@ -12,7 +12,7 @@ export const useHttp = () => {
           body = JSON.stringify(body);
           headers["Content-Type"] = "application/json";
         }
-
+        console.log(process.env.BACK_URI);
         const response = await fetch(url, { method, body, headers });
         const data = await response.json();
 
