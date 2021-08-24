@@ -13,10 +13,7 @@ export const useHttp = () => {
           headers["Content-Type"] = "application/json";
         }
 
-        const response = await fetch(
-          "https://shortlinks-server-6rcipl2eqq-uc.a.run.app" + url,
-          { method, body, headers }
-        );
+        const response = await fetch(url, { method, body, headers });
         const data = await response.json();
 
         if (!response.ok) {
