@@ -7,6 +7,7 @@ export const useHttp = () => {
   const request = useCallback(
     async (url, method = "GET", body = null, headers = {}) => {
       const BACK_URI = process.env.BACK_URL + "";
+      console.log(BACK_URI);
       setLoading(true);
       try {
         if (body) {
