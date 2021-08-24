@@ -14,7 +14,7 @@ app.use("/t", require("./routes/redirect.routes"));
 const PORT = process.env.PORT || 5000;
 async function start() {
   try {
-    await mongoose.connect(config.get("mongoUri"), {
+    await mongoose.connect(process.env.DB, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
