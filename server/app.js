@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(express.json({ extended: true }));
-app.use(corse());
+app.use(cors());
 app.use("/api/auth", require("./routes/auth.routes"));
 app.use("/api/link", require("./routes/link.routes"));
 app.use("/t", require("./routes/redirect.routes"));
