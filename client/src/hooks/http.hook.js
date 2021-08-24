@@ -12,11 +12,14 @@ export const useHttp = () => {
           body = JSON.stringify(body);
           headers["Content-Type"] = "application/json";
         }
-        const response = await fetch(`${process.env.BACK_URI}` + url, {
-          method,
-          body,
-          headers,
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_BACK_URI}` + url,
+          {
+            method,
+            body,
+            headers,
+          }
+        );
         const data = await response.json();
 
         if (!response.ok) {
