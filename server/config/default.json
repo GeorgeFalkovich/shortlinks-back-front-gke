@@ -1,6 +1,6 @@
 {
   "port": 5000,
   "jwtSecret": "vladilen youtube mern",
-  "mongoUri": "mongodb+srv://gfalk:1234@cluster0.vbtf9.mongodb.net/mernshortdb?retryWrites=true&w=majority",
-  "baseUrl": "https://shortlinks-server-6rcipl2eqq-uc.a.run.app"
+  "mongoUri": "",
+  "baseUrl": ""
 }
