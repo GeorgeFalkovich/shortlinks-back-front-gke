@@ -11,9 +11,6 @@ export const AuthPage = () => {
     email: "",
     password: "",
   });
-
-  console.log("back uri - " + process.env.BACK_URI);
-
   useEffect(() => {
     message(error);
     clearError();
