@@ -12,7 +12,7 @@ export const AuthPage = () => {
     password: "",
   });
 
-  console.log(process.env.BACK_URI);
+  console.log("back uri - " + process.env.BACK_URI);
 
   useEffect(() => {
     message(error);
