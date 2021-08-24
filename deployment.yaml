@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shortlinks-back
+  name: shortlinks-front
   labels:
-    app: shortlinks-back
+    app: shortlinks-fron
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: shortlinks-back
+      app: shortlinks-front
   template:
     metadata:
       labels:
-        app: shortlinks-back
+        app: shortlinks-front
     spec:
       containers:
-        - name: shortlinks-back
-          image: gfalk85/shortlinks-be
+        - name: shortlinks-front
+          image: gfalk85/shortlinks-fe
           ports:
-            - containerPort: 5000
+            - containerPort: 80
